@@ -2,9 +2,9 @@
 
 Para poder realizar estas consultas entre capas es necesario incorporar un módulo a Geoserver llamado QueryLayer [0]
 
-   INTERSECTS(the_geom, collectGeometries(queryCollection('Trails', 'the_geom', 'INCLUDE')));INCLUDE
-   INTERSECTS(the_geom, querySingle('wifi', 'the_geom','comuna = 1')).
-   INTERSECTS(the_geom, querySingle('areas_hospitalarias', 'the_geom','GIDAH=4'))
+    INTERSECTS(the_geom, collectGeometries(queryCollection('Trails', 'the_geom', 'INCLUDE')));INCLUDE
+    INTERSECTS(the_geom, querySingle('wifi', 'the_geom','comuna = 1')).
+    INTERSECTS(the_geom, querySingle('areas_hospitalarias', 'the_geom','GIDAH=4'))
 
 
 
