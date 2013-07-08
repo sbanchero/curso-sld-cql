@@ -11,7 +11,14 @@ Para acceder a nuestro directorio web desde el navegador vamos a [http://localho
 
 
 ## Datos
-Utilizaremos datos de 
+Utilizaremos datos publicados por el Gobierno de la Ciudad de Buenos Aires que pueden ser encontrados [http://data.buenosaires.gob.ar](aquí)
+
+Las coberturas son:
+
+  * Áreas Hospitalarias
+  * Puntos de acceso WI-FI público
+
+También utilizaremos una cobertura de división departamental de Argentina de IGN
 
 
 
