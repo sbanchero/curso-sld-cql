@@ -14,6 +14,7 @@ Las capas sobre las que se realizarán los filtros son:
   * GIDAH 
   * NOMBRE
   * area km2
+  * habitantes
 
 ## Sintaxis de las consultas, definición de predicados
 
@@ -23,6 +24,17 @@ Las capas sobre las que se realizarán los filtros son:
 
 
 ### Probar algunos filtros básicos
+
+1. Aplicar filtros sobre la capa **wifi** 
+  * antenas de la comuna 4
+  * antenas de las comunas 1 a 6
+  * antenas ubicadas solo en **Teatros**
+  * 
+
+2. Aplicar filtros sobre la capa **Áreas hospitalarias** 
+  * filtrar el área con GIDAH 1
+  * 
+
 
 
 
