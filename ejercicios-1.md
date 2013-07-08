@@ -10,7 +10,7 @@ Las capas sobre las que se realizarán los filtros son:
   * LONG
   * DIRECCION
   * alcance [27 a 100] mts
-  * finstalac (Fecha de instalación de la antena aaaa-mm-dd)
+  * f_instalac (Fecha de instalación de la antena aaaa-mm-dd)
 
 * Áreas hospitalarias (POLYGON)
   * GIDAH 
@@ -50,16 +50,25 @@ Las capas sobre las que se realizarán los filtros son:
 
 
 2. Aplicar filtros sobre la capa **Áreas hospitalarias** 
-  * filtrar el área hospitalaria con GIDAH 1
-  * ¿qué ocurrio al aplicar el filtro anterior?
-  * filtrar áreas mayores o iguales a 11 km2
-  * filtrar áreas donde la cantidad de habitantes por km2 sea < 10000. Utilice paréntesis para escribir la expresión.
+  * filtrar el área hospitalaria con GIDAH mayor a 3 y menor que 6
+  * filtrar áreas mayores o iguales a 11 km2 y cantidad de habitantes mayores a 220000
+
+  Operador *BETWEEN AND*
+
+1. Aplicar filtros sobre la capa **wifi** 
+  * antenas de las comunas 1 a 6
+  * antenas con alcance entre 90 y 100
+
+2. Aplicar filtros sobre la capa **Áreas hospitalarias** 
+  * filtrar el área hospitalaria con área entre 14 y 20
+  * filtrar áreas cantidad de habitantes entre 100000 y 180000
+
+  Operadores *LIKE* / *ILIKE*
 
 
+  Operador *IN*
 
-
-
-
+COMUNA NOT  IN (1, 2, 3)
 
 
 
