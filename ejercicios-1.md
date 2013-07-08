@@ -15,7 +15,7 @@ Las capas sobre las que se realizarán los filtros son:
 * Áreas hospitalarias (POLYGON)
   * GIDAH 
   * NOMBRE
-  * area km2
+  * area_km2
   * habitantes
 
 ## Sintaxis de las consultas, definición de predicados
