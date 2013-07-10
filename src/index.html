@@ -171,7 +171,8 @@
                        singleTile: true, 
                        ratio: 1, 
                        isBaseLayer: false,
-                       yx : {'EPSG:4326' : true}
+                       visibility: false,
+                        yx : {'EPSG:4326' : true}
                     } 
                 );
                 
@@ -187,11 +188,27 @@
                        singleTile: true, 
                        ratio: 1, 
                        isBaseLayer: false,
+                       visibility: false,
                        yx : {'EPSG:4326' : true}
                     } 
                 );
                 
-                map.addLayers([untiled, areas_hospilates, wifi]);
+                avenidas = new OpenLayers.Layer.WMS(
+                    "Avenidas", "http://localhost:8080/geoserver/GeoINTA/wms",
+                    {
+                        LAYERS: 'GeoINTA:avenidas',
+                        transparent: true,
+                        format: format
+                    },
+                    {
+                       singleTile: true, 
+                       ratio: 1, 
+                       visibility: false,
+                       isBaseLayer: false,
+                       yx : {'EPSG:4326' : true}
+                    } 
+                );
+                map.addLayers([untiled, areas_hospilates, avenidas, wifi]);
 
                 // build up all controls
                 map.addControl(new OpenLayers.Control.PanZoomBar({
@@ -216,9 +233,9 @@
                         BBOX: map.getExtent().toBBOX(),
                         SERVICE: "WMS",
                         INFO_FORMAT: 'text/html',
-                        QUERY_LAYERS: "GeoINTA:departamentos,GeoINTA:areas_hospitalarias,GeoINTA:wifi", //map.layers[0].params.LAYERS,
+                        QUERY_LAYERS: "GeoINTA:departamentos,GeoINTA:areas_hospitalarias,GeoINTA:wifi,GeoINTA:avenidas", //map.layers[0].params.LAYERS,
                         FEATURE_COUNT: 50,
-                        Layers: ['GeoINTA:departamentos', 'GeoINTA:areas_hospitalarias','GeoINTA:wifi'],
+                        Layers: ['GeoINTA:departamentos', 'GeoINTA:areas_hospitalarias','GeoINTA:wifi', 'GeoINTA:avenidas'],
                         WIDTH: map.size.w,
                         HEIGHT: map.size.h,
                         format: format,
@@ -457,6 +474,8 @@
 					break;
 					case 3: untiled.mergeNewParams(params);
 					break;
+					case 4: avenidas.mergeNewParams(params);
+					break;
 				}
             }
         </script>
@@ -484,6 +503,7 @@
                         <option value="1">Wifi</option>
                         <option value="2">Hospitales</option>
                         <option value="3">Departamentos</option>
+                        <option value="4">Avenidas</option>
                     </select>
                 </li>
                 <li>
