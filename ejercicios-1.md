@@ -22,6 +22,8 @@ Las capas sobre las que se realizarán los filtros son:
   * area_km2
   * habitantes
 
+Estas capas las utilizaremos para todos los ejercicios.
+
 ## Sintaxis de las consultas, definición de predicados
 
 - Operadores relacionales
@@ -99,3 +101,6 @@ Las capas sobre las que se realizarán los filtros son:
   * filtrar las antenas que fueron colocadas después del 2012-07-15T00:00:00
 
 
+## Referencias
+  * [ECQL Reference](http://docs.geoserver.org/stable/en/user/filter/ecql_reference.html#filter-ecql-reference)
+ 
