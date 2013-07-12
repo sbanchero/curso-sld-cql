@@ -1,10 +1,21 @@
-# Consultas ECQL entre capas
+# Consultas CQL entre capas
 
 Para poder realizar estas consultas entre capas es necesario incorporar un módulo a Geoserver llamado QueryLayer [0]
 
-    INTERSECTS(the_geom, collectGeometries(queryCollection('Trails', 'the_geom', 'INCLUDE')));INCLUDE
-    INTERSECTS(the_geom, querySingle('wifi', 'the_geom','comuna = 1')).
-    INTERSECTS(the_geom, querySingle('areas_hospitalarias', 'the_geom','GIDAH=4'))
+  **querySingle** 	layer: String, attribute: String, filter: String
+
+  **queryCollection** 	layer: String, attribute: String, filter: String
+
+  **collectGeometries** 	geometries: a list of Geometry objects
+  
+
+Ejemplos:
+    
+  DWITHIN(the_geom, collectGeometries(queryCollection('wifi','the_geom','comuna = 1')), 0.02, meters)
+
+  INTERSECTS(the_geom, querySingle('wifi', 'the_geom','comuna = 1')).
+
+  INTERSECTS(the_geom, querySingle('areas_hospitalarias', 'the_geom','GIDAH=4'))
 
 
 
