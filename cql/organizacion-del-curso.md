@@ -3,9 +3,11 @@
 ## Software
   * Vamos a trabajar con una página web de ejemplo que la podemos servir desde nuestras máquinas utilizando Python.
 
-  python -m SimpleHTTPServer
-  Serving HTTP on 0.0.0.0 port 8000 ...
-
+```
+python -m SimpleHTTPServer
+Serving HTTP on 0.0.0.0 port 8000 ...
+```
+  
     La idea es que lo puedan reproducir uds.
 
   * Para acceder a nuestro directorio web desde el navegador vamos a [http://localhost:8000](http://localhost:8000)
